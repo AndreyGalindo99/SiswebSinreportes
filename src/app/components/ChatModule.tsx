@@ -1,5 +1,6 @@
 import { Send, Paperclip, Check, CheckCheck, Phone, Video, MoreVertical } from 'lucide-react';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 interface Message {
   id: number;
@@ -98,13 +99,13 @@ export function ChatModule({ userRole }: { userRole: string }) {
           </div>
 
           <div className="flex items-center gap-2">
-            <button className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition">
+            <button onClick={() => toast.info("Iniciando llamada...")} className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition">
               <Phone className="w-5 h-5 text-slate-600" />
             </button>
-            <button className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition">
+            <button onClick={() => toast.info("Iniciando videollamada...")} className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition">
               <Video className="w-5 h-5 text-slate-600" />
             </button>
-            <button className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition">
+            <button onClick={() => toast.info("Más opciones")} className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition">
               <MoreVertical className="w-5 h-5 text-slate-600" />
             </button>
           </div>
@@ -144,7 +145,7 @@ export function ChatModule({ userRole }: { userRole: string }) {
 
         <div className="p-4 border-t border-slate-200 bg-white">
           <div className="flex items-end gap-3">
-            <button className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition flex-shrink-0">
+            <button onClick={() => toast.info("Adjuntar archivo seleccionado")} className="w-10 h-10 hover:bg-slate-100 rounded-lg flex items-center justify-center transition flex-shrink-0">
               <Paperclip className="w-5 h-5 text-slate-600" />
             </button>
 
@@ -152,7 +153,7 @@ export function ChatModule({ userRole }: { userRole: string }) {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                onKeyPress={(e) => {
+                onKeyDown={(e) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
                     handleSend();

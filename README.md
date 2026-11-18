@@ -3,25 +3,6 @@
 Plataforma web para la administración, visualización y gestión de reportes e incidencias.
 
 ---
-
-## Estructura del Proyecto
-
-El repositorio está organizado siguiendo las directrices de entrega académica:
-
-```text
-├── docs/           # Documentación del proyecto (informes, guías y diseño)
-├── src/            # Código fuente de la aplicación (componentes, vistas, estilos)
-├── data/           # Conjuntos de datos, esquemas y archivos JSON utilizados
-├── scripts/        # Scripts de utilidad, automatización o consultas
-├── dashboard/      # Reportes, gráficos y dashboards generados
-├── evidencias/     # Capturas de pantalla, pruebas visuales y demostraciones
-├── LICENSE         # Términos y licencia del proyecto
-├── .gitignore      # Archivos y dependencias excluidas del control de versiones
-└── README.md       # Presentación y documentación general del repositorio
-```
-
----
-
 ## Tecnologías Utilizadas
 
 - **Framework:** React + Vite
@@ -50,9 +31,3 @@ El repositorio está organizado siguiendo las directrices de entrega académica:
    ```
 
 ---
-
-## Ramas de Trabajo
-
-Se recomienda el flujo de trabajo en ramas:
-- `main`: Versión estable para entrega.
-- `dev`: Entorno de desarrollo para integración de funcionalidades y pruebas.

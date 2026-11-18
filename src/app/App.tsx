@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Toaster } from "sonner";
 import { AdminPayments } from "./components/AdminPayments";
+import { ChatModule } from "./components/ChatModule";
 import { ClientDashboard } from "./components/ClientDashboard";
 import { ClientHistory } from "./components/ClientHistory";
 import { EvidenceModule } from "./components/EvidenceModule";
@@ -45,6 +46,8 @@ export default function App() {
         return <EvidenceModule role={userRole} />;
       case "payments":
         return <PaymentsModule />;
+      case "chat":
+        return <ChatModule userRole={userRole} />;
       case "manager":
         return <ManagerPanel />;
       case "owner":

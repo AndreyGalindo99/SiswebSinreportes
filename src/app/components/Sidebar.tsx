@@ -1,4 +1,4 @@
-import { BarChart3, Banknote, Building2, CreditCard, FileClock, FileText, Home, Landmark, LogOut, Settings2, Upload, User, UsersRound } from "lucide-react";
+import { BarChart3, Banknote, Building2, CreditCard, FileClock, FileText, Home, Landmark, LogOut, MessageSquare, Settings2, Upload, User, UsersRound } from "lucide-react";
 
 interface SidebarProps {
   activeTab: string;
@@ -13,6 +13,7 @@ export function Sidebar({ activeTab, onTabChange, role, onLogout }: SidebarProps
     { id: "client-case", label: "Mi caso", icon: FileText },
     { id: "evidence", label: "Evidencias", icon: Upload },
     { id: "payments", label: "Pagos", icon: CreditCard },
+    { id: "chat", label: "Chat", icon: MessageSquare },
     { id: "profile", label: "Perfil", icon: User },
   ];
 
@@ -20,6 +21,7 @@ export function Sidebar({ activeTab, onTabChange, role, onLogout }: SidebarProps
     { id: "home", label: "Inicio", icon: Home },
     { id: "cases", label: "Casos", icon: UsersRound },
     { id: "evidence", label: "Evidencias", icon: Upload },
+    { id: "chat", label: "Chat", icon: MessageSquare },
     { id: "history", label: "Historial cliente", icon: FileClock },
     { id: "profile", label: "Perfil", icon: User },
   ];
