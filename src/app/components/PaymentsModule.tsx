@@ -202,11 +202,11 @@ export function PaymentsModule() {
               </div>
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 {(officeType === "fisica" ? [
-                  { name: "Bancolombia · Ahorros", number: "245-908172-44", owner: "Áurea Gestión Legal S.A.S.", icon: Landmark },
+                  { name: "Bancolombia · Ahorros", number: "245-908172-44", owner: "Área Gestión Legal S.A.S.", icon: Landmark },
                   { name: "Daviplata", number: "310 845 2210", owner: "NIT 901.284.520-1", icon: Smartphone },
                 ] : [
                   { name: "Nequi", number: "315 720 8841", owner: "Recaudo oficina digital", icon: Smartphone },
-                  { name: "Davivienda · Ahorros", number: "0048-0012-8840", owner: "Áurea Digital S.A.S.", icon: Landmark },
+                  { name: "Davivienda · Ahorros", number: "0048-0012-8840", owner: "Área Digital S.A.S.", icon: Landmark },
                 ]).map((channel) => {
                   const Icon = channel.icon;
                   return <div key={channel.name} className="rounded-md border border-border p-5"><Icon className="h-6 w-6 text-accent" /><h3 className="mt-4 font-bold text-primary">{channel.name}</h3><p className="mt-2 font-mono text-lg font-bold">{channel.number}</p><p className="mt-1 text-xs text-muted-foreground">{channel.owner}</p></div>;

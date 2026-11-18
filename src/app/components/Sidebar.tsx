@@ -1,4 +1,4 @@
-import { BarChart3, Banknote, Building2, CreditCard, FileClock, FileText, Home, Landmark, LogOut, MessageSquare, Settings2, Upload, User, UsersRound } from "lucide-react";
+import { BarChart3, Banknote, Building2, CreditCard, FileClock, FileText, Home, Landmark, LogOut, Settings2, Upload, User, UsersRound } from "lucide-react";
 
 interface SidebarProps {
   activeTab: string;
@@ -13,7 +13,6 @@ export function Sidebar({ activeTab, onTabChange, role, onLogout }: SidebarProps
     { id: "client-case", label: "Mi caso", icon: FileText },
     { id: "evidence", label: "Evidencias", icon: Upload },
     { id: "payments", label: "Pagos", icon: CreditCard },
-    { id: "chat", label: "Chat", icon: MessageSquare },
     { id: "profile", label: "Perfil", icon: User },
   ];
 
@@ -21,7 +20,6 @@ export function Sidebar({ activeTab, onTabChange, role, onLogout }: SidebarProps
     { id: "home", label: "Inicio", icon: Home },
     { id: "cases", label: "Casos", icon: UsersRound },
     { id: "evidence", label: "Evidencias", icon: Upload },
-    { id: "chat", label: "Chat", icon: MessageSquare },
     { id: "history", label: "Historial cliente", icon: FileClock },
     { id: "profile", label: "Perfil", icon: User },
   ];
@@ -71,7 +69,7 @@ export function Sidebar({ activeTab, onTabChange, role, onLogout }: SidebarProps
             </svg>
           </div>
           <div className="hidden lg:block">
-            <h2 className="font-bold text-sidebar-foreground">Áurea Legal</h2>
+            <h2 className="font-bold text-sidebar-foreground">Área Legal</h2>
             <p className="text-xs text-sidebar-foreground/60">{getRoleTitle()}</p>
           </div>
         </div>
@@ -87,11 +85,10 @@ export function Sidebar({ activeTab, onTabChange, role, onLogout }: SidebarProps
               key={item.id}
               onClick={() => onTabChange(item.id)}
               title={item.label}
-              className={`flex w-full items-center justify-center gap-3 rounded-md px-3 py-3 text-left text-sm transition-colors lg:justify-start lg:px-4 ${
-                isActive
+              className={`flex w-full items-center justify-center gap-3 rounded-md px-3 py-3 text-left text-sm transition-colors lg:justify-start lg:px-4 ${isActive
                   ? 'bg-sidebar-primary text-sidebar-primary-foreground'
                   : 'text-sidebar-foreground/80 hover:bg-sidebar-accent'
-              }`}
+                }`}
             >
               <Icon className="w-5 h-5" />
               <span className="hidden lg:block">{item.label}</span>
