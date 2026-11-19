@@ -85,8 +85,4 @@ Al ingresar a la pantalla de inicio de sesión (`Login`), puedes ingresar con cu
 
 ---
 
-## 6. Tecnologías Utilizadas
-
-* **Frontend:** React 18, TypeScript, Vite
-* **Estilos y Componentes:** Tailwind CSS, Radix UI, Lucide Icons, Sonner (Notificaciones)
-* **Gráficos y Métricas:** Recharts
+## 
